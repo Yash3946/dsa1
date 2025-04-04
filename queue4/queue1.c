@@ -31,24 +31,25 @@ void display()
     }
 }
 
-void removeElement() 
+void removeElement()
 {
-    if (Front == -1) 
+    if(Front ==-1)
     {
-        printf("\nQueue is empty");
-    } 
-    else 
+        printf("\n queue is empty");
+    }
+    else
     {
-        printf("\nRemoved element: %d", q[Front]);
-
-        if (Front == Rear) 
+        printf("\n %d",q[Front]);
         {
-            Front = -1;
-            Rear = -1;
-        } 
-        else 
-        {
-            Front++;
+            if(Front==Rear)
+            {
+                Front=-1;
+                Rear=-1;
+            }
+            else
+            {
+                Front++;
+            }
         }
     }
 }
@@ -70,7 +71,7 @@ int main()
                 scanf("%d", &num);
                 enQueue(num);
                 break;
-
+        
             case 2:
                 display();
                 break;
